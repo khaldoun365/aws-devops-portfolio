@@ -1,8 +1,8 @@
 <h1 align="center">👋 Hi, I'm <span style="color:#4F8CFF">Khaldoun Mousa</span></h1>
 
 <p align="center">
-  <b>DevOps Engineer in Progress</b> · <b>AWS</b> · <b>Terraform</b> · <b>Docker</b> · <b>Kubernetes</b><br>
-  <sub>Amman, Jordan · Tech Support at BusinessHub</sub>
+  <b>DevOps Engineer </b> · <b>AWS</b> · <b>Terraform</b> · <b>Docker</b> · <b>Kubernetes</b><br>
+  <sub>Amman, Jordan · Techical Support at Migrate</sub>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 ---
 
 ### 🧭 About Me
-- 💼 **Technical Support Officer @ BusinessHub**  
+- 💼 **Technical Support Officer @ Migrate**  
 - ☁️ Exploring **AWS**, **Terraform**, and **Cloud Automation**  
 - 🧱 Building real-world **DevOps projects** from scratch  
 - ⚙️ Learning **CI/CD**, **Docker**, and **Kubernetes** step by step  
