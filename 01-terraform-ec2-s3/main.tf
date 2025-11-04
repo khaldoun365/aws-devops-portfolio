@@ -1,36 +1,50 @@
 terraform {
-  required_version = ">= 1.5.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
   }
+  required_version = ">= 1.5.0"
 }
 
 provider "aws" {
-  region = var.region
+  region = "us-east-1"
 }
 
+# Create S3 bucket for portfolio files
 resource "aws_s3_bucket" "portfolio_bucket" {
-  bucket        = var.bucket_name
+  bucket        = "khaldoun-aws-portfolio-bucket"
   force_destroy = true
+
+  tags = {
+    Name        = "portfolio-bucket"
+    Environment = "dev"
+  }
 }
 
+# Create EC2 instance with Nginx
 resource "aws_instance" "web" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  tags = { Name = "aws-devops-ec2", Project = "portfolio" }
+  ami           = "ami-0bdd88bd06d16ba03"  # Amazon Linux 2023 (Free Tier)
+  instance_type = "t2.micro"
 
   user_data = <<-EOF
     #!/bin/bash
-    apt-get update -y || yum update -y
-    apt-get install -y nginx || amazon-linux-extras install -y nginx1
-    systemctl enable nginx || true
-    systemctl start nginx || true
-    echo "Hello from Terraform EC2 on $(hostname)" > /var/www/html/index.html
+    yum update -y
+    yum install -y nginx
+    systemctl enable nginx
+    systemctl start nginx
+    echo "Hello from Khaldoun's AWS EC2!" > /usr/share/nginx/html/index.html
   EOF
+
+  tags = {
+    Name    = "terraform-ec2"
+    Project = "portfolio"
+  }
 }
 
-output "bucket_name"  { value = aws_s3_bucket.portfolio_bucket.id }
-output "ec2_public_ip" { value = aws_instance.web.public_ip }
+# Output EC2 public IP
+output "ec2_public_ip" {
+  value = aws_instance.web.public_ip
+}
+
