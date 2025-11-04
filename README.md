@@ -36,3 +36,49 @@ terraform plan -var='bucket_name=your-unique-bucket-name'
 
 # Deploy EC2 + S3
 terraform apply -auto-approve -var='bucket_name=your-unique-bucket-name'
+✅ Outputs:
+
+EC2 Public IP
+
+S3 Website URL
+
+🔗 Live Demo: http://52.90.232.237
+
+🔹 Project 2 — BusinessHub Dashboard
+Tools: Node.js · Express · HTML/CSS · Render
+
+Dashboard for managing BusinessHub operations, currently hosted on Render.
+Next step: containerize the app with Docker and deploy it to AWS ECS/EKS.
+
+🔗 Live App: https://business11-qshq.onrender.com/
+🔗 GitHub Repo: khaldoun365
+
+⚙️ Tech Stack
+Category	Tools
+☁️ Cloud	AWS (EC2, S3, IAM, CloudWatch)
+🧱 IaC	Terraform
+🐳 Containers	Docker, Kubernetes (soon)
+🔁 CI/CD	GitHub Actions (planned)
+🌐 Web	NGINX, Render, Node.js
+📊 Monitoring	CloudWatch, Grafana (planned)
+💻 OS	Linux, Ubuntu, Amazon Linux 2023
+
+🧩 Roadmap
+ Add Docker + Kubernetes deployments
+
+ Configure GitHub Actions for auto-deploy
+
+ Integrate CloudWatch + Grafana dashboards
+
+ Register custom domain with Route53
+
+ Add badges for certification progress
+
+👤 Author
+Khaldoun Mousa
+📍 Amman, Jordan
+🌐 GitHub Profile
+💼 LinkedIn — Coming Soon
+
+<p align="center"> <i>“Don’t just say you do DevOps. Prove it by building.”</i><br> — K. Mousa </p>
+<p align="center"> <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square"> <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4-lightgrey?style=flat-square"> </p> ```
